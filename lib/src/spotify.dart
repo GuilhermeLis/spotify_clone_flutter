@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
+import 'package:spotify_clone/theme/colors.dart';
+
 // -------------- Pages --------------
-import 'package:spotify_clone/src/home/home.dart';
+import 'package:spotify_clone/src/pages/navigationBar.dart';
 
 class SpotifyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "spotify",
+      title: "Spotify",
       theme: ThemeData(
-        primaryColor: Colors.blue,
-        accentColor: Colors.green,
-        textTheme: TextTheme(bodyText2: TextStyle(color: Colors.purple)),
+        primaryColor: black,
+        backgroundColor: black,
+        textTheme: TextTheme(bodyText2: TextStyle(color: white)),
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => Home(),
+        "/": (context) => NavigationBar(),
       },
     );
   }
